@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DS Record | Data Science Laboratory</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header class="top-header">
+
+    <div class="brand">
+        <div class="brand-mark">DS</div>
+
+        <div>
+            <h1>DS Digital Library</h1>
+            <p>DATA SCIENCE LABORATORY</p>
+        </div>
+    </div>
+
+    <div class="student-card">
+        <img src="images/profile.jpg" alt="Student Photo">
+
+        <div>
+            <h3>A.K.Kavya Sree</h3>
+            <p>Roll No: 24102A030001</p>
+            <p>Faculty: Bosu Babu</p>
+        </div>
+    </div>
+
+    <nav class="top-nav" aria-label="Main navigation">
+        <button class="nav-item active" id="homeNav" onclick="showHome()"><span class="nav-icon">⌂</span><span>Home</span></button>
+        <button class="nav-item" id="experimentsNav" onclick="showExperiments()"><span class="nav-icon">▣</span><span>Experiments</span></button>
+        <button class="nav-item" id="modulesNav" onclick="showModules()"><span class="nav-icon">▦</span><span>Modules</span></button>
+        <button class="nav-item" id="projectsNav" onclick="showProjects()"><span class="nav-icon">▤</span><span>Projects</span></button>
+    </nav>
+
+</header>
+
+
+<main>
+
+    <section class="welcome">
+        <div>
+            <span class="small-title">ACADEMIC RECORD</span>
+
+            <h2>
+                Data Science
+                <span>Practical Record</span>
+            </h2>
+
+            <p>
+                A digital record of Data Science laboratory experiments,
+                programs, outputs and visualizations.
+            </p>
+        </div>
+    </section>
+
+
+    <section class="tools">
+
+        <div class="search-box">
+            <span>⌕</span>
+            <input
+                type="text"
+                id="searchInput"
+                placeholder="Search experiments..."
+                onkeyup="searchExperiments()"
+            >
+        </div>
+
+        <button class="add-btn" onclick="openAddModal()">
+            + Add Experiment
+        </button>
+
+    </section>
+
+
+    <section class="experiment-grid" id="experimentGrid">
+
+        <!-- EXPERIMENT 1 -->
+        <div class="experiment-card" data-search="experiment 1 pandas data handling">
+
+            <div class="experiment-image">
+                <img src="images/exp1.jpg" alt="Pandas Data Handling">
+            </div>
+
+            <div class="experiment-content">
+
+                <span class="experiment-number">EXPERIMENT 01</span>
+
+                <h3>Pandas Data Handling</h3>
+
+                <p>
+                    Load, create, read and export structured datasets using
+                    Pandas with CSV, TXT, JSON and Excel files.
+                </p>
+
+                <div class="view-experiment-wrap">
+                    <button class="view-experiment-btn" onclick="openExperimentOverview('1')">
+                        View Experiment
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- EXPERIMENT 2 -->
+        <div class="experiment-card" data-search="experiment 2 api database github sqlite">
+
+            <div class="experiment-image">
+                <img src="images/exp2.jpg" alt="API and Database">
+            </div>
+
+            <div class="experiment-content">
+
+                <span class="experiment-number">EXPERIMENT 02</span>
+
+                <h3>Data Acquisition and Database Handling</h3>
+
+                <p>
+                    Retrieve data from APIs and manage structured student
+                    records using SQLite databases and Pandas.
+                </p>
+
+                <div class="view-experiment-wrap">
+                    <button class="view-experiment-btn" onclick="openExperimentOverview('2')">
+                        View Experiment
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- EXPERIMENT 3 -->
+        <div class="experiment-card" data-search="experiment 3 data cleaning preprocessing missing values outliers">
+
+            <div class="experiment-image">
+                <img src="images/exp3.jpg" alt="Data Cleaning">
+            </div>
+
+            <div class="experiment-content">
+
+                <span class="experiment-number">EXPERIMENT 03</span>
+
+                <h3>Data Cleaning and Preprocessing</h3>
+
+                <p>
+                    Handle missing values, transform data, detect outliers
+                    and process text using Python data-cleaning techniques.
+                </p>
+
+                <div class="view-experiment-wrap">
+                    <button class="view-experiment-btn" onclick="openExperimentOverview('3')">
+                        View Experiment
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- EXPERIMENT 4 -->
+        <div class="experiment-card" data-search="experiment 4 hierarchical indexing stack unstack combine dataframe">
+
+            <div class="experiment-image">
+                <img src="images/exp4.jpg" alt="Hierarchical Indexing">
+            </div>
+
+            <div class="experiment-content">
+
+                <span class="experiment-number">EXPERIMENT 04</span>
+
+                <h3>Hierarchical Indexing and Data Combination</h3>
+
+                <p>
+                    Explore hierarchical indexing, stack and unstack operations,
+                    and combine multiple DataFrames using Pandas.
+                </p>
+
+                <div class="view-experiment-wrap">
+                    <button class="view-experiment-btn" onclick="openExperimentOverview('4')">
+                        View Experiment
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- EXPERIMENT 5 -->
+        <div class="experiment-card" data-search="experiment 5 visualization matplotlib seaborn charts graphs">
+
+            <div class="experiment-image">
+                <img src="images/exp5.jpg" alt="Data Visualization">
+            </div>
+
+            <div class="experiment-content">
+
+                <span class="experiment-number">EXPERIMENT 05</span>
+
+                <h3>Data Visualization</h3>
+
+                <p>
+                    Create informative charts using Matplotlib and Seaborn
+                    for comparing, analyzing and understanding datasets.
+                </p>
+
+                <div class="view-experiment-wrap">
+                    <button class="view-experiment-btn" onclick="openExperimentOverview('5')">
+                        View Experiment
+                    </button>
+                </div>
+
+            </div>
+        </div>
+                <!-- EXPERIMENT 6 -->
+        <div class="experiment-card" data-search="experiment 6 time series pandas datetime resampling">
+
+            <div class="experiment-image">
+                <img src="images/exp6.jpg" alt="Time Series Analysis">
+            </div>
+
+            <div class="experiment-content">
+
+                <span class="experiment-number">EXPERIMENT 06</span>
+
+                <h3>Time Series Analysis</h3>
+
+                <p>
+                    Analyze time-series data using datetime objects,
+                    time zones, periods, frequency conversion and
+                    resampling techniques with Pandas.
+                </p>
+
+                <div class="view-experiment-wrap">
+                    <button class="view-experiment-btn" onclick="openExperimentOverview('6')">
+                        View Experiment
+                    </button>
+                </div>
+
+            </div>
+        </div>
+
+    </section>
+
+    <section class="modules-panel" id="modulesPanel" style="display:none;">
+        <div class="modules-header">
+            <div>
+                <span class="small-title">DATA SCIENCE LABORATORY</span>
+                <h2>Modules</h2>
+                <p>Create and manage your own learning modules.</p>
+            </div>
+            <button class="add-btn" onclick="openAddModuleModal()">+ Add Module</button>
+        </div>
+        <div class="modules-grid" id="modulesGrid">
+            <div class="empty-modules" id="emptyModules">
+                <div class="empty-icon">▦</div>
+                <h3>No modules added yet</h3>
+                <p>Click <strong>+ Add Module</strong> to add your own modules.</p>
+            </div>
+        </div>
+    </section>
+
+    
+<section class="projects-panel" id="projectsPanel" style="display:none;">
+
+    <div class="modules-header">
+        <div>
+            <span class="small-title">DATA SCIENCE LABORATORY</span>
+            <h2>Projects</h2>
+            <p>Your Data Science projects will be organized here.</p>
+        </div>
+
+        <button class="add-btn" onclick="openAddProjectModal()">
+            + Add Project
+        </button>
+    </div>
+
+    <div class="projects-grid" id="projectsGrid"></div>
+
+    <div class="projects-empty" id="projectsEmpty">
+        <div class="empty-icon">▤</div>
+        <h3>No Projects Yet</h3>
+        <p>Click the Add Project button to create your first project.</p>
+    </div>
+
+</section>
+
+
+</main>
+
+
+<!-- SUB EXPERIMENT MODAL -->
+
+<div class="modal" id="groupModal">
+
+    <div class="modal-box small-modal">
+
+        <button class="close-btn" onclick="closeGroup()">×</button>
+
+        <span class="small-title">DATA SCIENCE LABORATORY</span>
+
+        <h2 id="groupTitle"></h2>
+
+        <p id="groupDescription" class="group-description"></p>
+
+        <div id="groupItems"></div>
+
+    </div>
+
+</div>
+
+
+<!-- EXPERIMENT DETAIL MODAL -->
+
+<div class="modal" id="detailModal">
+
+    <div class="modal-box detail-box">
+
+        <button class="close-btn" onclick="closeDetail()">×</button>
+
+        <span class="small-title">DATA SCIENCE LABORATORY</span>
+
+        <h2 id="detailTitle"></h2>
+
+        <div class="video-section">
+
+            <h3>Experiment Video</h3>
+
+            <video id="detailVideo" controls>
+                <source id="videoSource" src="" type="video/mp4">
+                Your browser does not support video.
+            </video>
+
+        </div>
+
+
+        <div class="overview-section">
+
+            <h3>Overview</h3>
+
+            <p id="detailOverview"></p>
+
+        </div>
+
+
+        <div class="code-section">
+
+            <div class="section-heading">
+                <h3>Program / Source Code</h3>
+
+                <button onclick="copyCode()">Copy Code</button>
+            </div>
+
+            <pre><code id="detailCode"></code></pre>
+
+        </div>
+
+
+        <div class="output-section">
+
+            <h3>Output / Result</h3>
+
+            <pre id="detailOutput"></pre>
+
+        </div>
+
+
+        <div class="graph-section" id="graphSection">
+
+            <h3>Graph / Visualization</h3>
+
+            <div id="graphContainer"></div>
+
+        </div>
+
+
+        <div class="github-section">
+            <h3>GitHub Repository</h3>
+            <div class="github-link-row">
+                <input type="url" id="detailGithubLink" placeholder="Paste GitHub repository link here">
+                <button onclick="openGithubLink()">Open</button>
+            </div>
+        </div>
+
+        <button class="back-btn" onclick="closeDetail()">
+            ← Back
+        </button>
+
+    </div>
+
+</div>
+
+
+
+<!-- EXPERIMENT OVERVIEW MODAL -->
+<div class="modal" id="experimentOverviewModal">
+    <div class="modal-box overview-modal-box">
+        <button class="close-btn" onclick="closeExperimentOverview()">×</button>
+        <span class="small-title">DATA SCIENCE LABORATORY</span>
+        <h2 id="experimentOverviewTitle"></h2>
+        <p class="experiment-overview-text" id="experimentOverviewText"></p>
+        <div class="overview-items" id="experimentOverviewItems"></div>
+    </div>
+</div>
+
+<!-- ADD MODULE MODAL -->
+<div class="modal" id="addModuleModal">
+    <div class="modal-box small-modal">
+        <button class="close-btn" onclick="closeAddModuleModal()">×</button>
+        <span class="small-title">NEW MODULE</span>
+        <h2>Add Module</h2>
+        <input type="text" id="newModuleName" placeholder="Module name">
+        <textarea id="newModuleDescription" placeholder="Module overview"></textarea>
+        <button class="save-btn" onclick="addModule()">Add Module</button>
+    </div>
+</div>
+
+<!-- ADD EXPERIMENT MODAL -->
+
+<div class="modal" id="addModal">
+
+    <div class="modal-box small-modal">
+
+        <button class="close-btn" onclick="closeAddModal()">×</button>
+
+        <span class="small-title">NEW RECORD</span>
+
+        <h2>Add Experiment</h2>
+
+        <input
+            type="text"
+            id="newExperimentName"
+            placeholder="Experiment name"
+        >
+
+        <textarea
+            id="newExperimentDescription"
+            placeholder="Experiment description"
+        ></textarea>
+
+        <button class="save-btn" onclick="addExperiment()">
+            Add Experiment
+        </button>
+
+    </div>
+    
+<!-- ADD PROJECT MODAL -->
+<div class="modal" id="addProjectModal">
+    <div class="modal-box small-modal">
+
+        <button class="close-btn" onclick="closeAddProjectModal()">×</button>
+
+        <span class="small-title">NEW PROJECT</span>
+        <h2>Add Project</h2>
+
+        <input type="text" id="newProjectName" placeholder="Project name">
+
+        <textarea id="newProjectDescription" placeholder="Project description"></textarea>
+
+        <input type="url" id="newProjectGithub" placeholder="GitHub repository URL (optional)">
+
+        <button class="save-btn" onclick="addProject()">Save Project</button>
+
+    </div>
+</div>
+
+
+</div>
+
+
+
+<script src="script.js"></script>
+
+</body>
+</html>
